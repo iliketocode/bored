@@ -1,11 +1,57 @@
-<p>Welcome to Bored Activities!
-If you are bored, try some of these!  -------->                                                                                                               
-<br>
-                                                                    
-<a href="http://iliketocode.github.io/bored/makeaden1">Making a Den</a>
-<br>
-<a href="http://iliketocode.github.io/bored/scratch">Scratch</a>
-<br>
-<a href="http://iliketocode.github.io/bored/soundation">Making Music</a>
-</p>
+<html>
+	<head>
+		<title>Home | Bored Activities</title>
+		<link rel="stylesheet" href="style.css">
+		<meta name="keywords" content="bored, activities, boredactivities">
+		<meta name="description" content="If you are bored, try some of these!">
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+<header>
+	<!--Note: This header list thing is a little bugged and can't hold anything more than 1 item-->
+	<ul class="headerlist">
+		<li><a href="index.html" class="headerlistitem">Bored Activities!</a></li>
+	</ul>
+	<span style="text-align:right"><form action="search.html" method="get"><input type="text" name="q" id="queryform"><button type="submit" id="submitform">🔎</button></form></span>
+</header>
+<h1 class="homeheader">Welcome to Bored Activities!</h1>
 
+<div class="homesubheader">If you are bored, try some of these!</div>                                                                                                      
+
+<center><table>
+	<thead>
+		<tr><td><b>Icon</b></td><td><b>Name</b></td><td><b>Indoor, outdoor or online</b></td><td><b>Author</b></td></tr>
+	</thead>
+	<tbody>
+		<!--Template for adding--!
+		<tr>
+			<td><a href="(link to page)"><img src="(img link)" alt="(alt text)"></a></td>
+			<td><a href="(link to page)">(page name)"></td>
+			<td><center>(Indoor, outdoor, online)</center></td>
+			<td>(author)</td>
+		</tr>
+		-->
+		<tr>
+			<td><a href="scratch.html"><img src="https://cdn.scratch.mit.edu/scratchr2/static/__57b2a677d3c2e18f3d651f9b2bd3511d__/images/logo_sm.png" alt="Scratch Logo"></a></td>
+			<td><a href="scratch.html">Scratch</a></td>
+			<td><center>Online</center></td>
+			<td>iliketocode</td>
+		</tr>
+		<tr>
+			<td><a href="makeaden1.html"><img src="https://cdn2.scratch.mit.edu/get_image/project/82884480_100x100.png" alt="Diagram of the den layout"></a></td>
+			<td><a href="makeaden1.html">Making a den</a></td>
+			<td><center>Outdoor</center></td>
+			<td>iliketocode</td>
+		</tr>
+		<tr>
+			<td><a href="soundation.html">None</a></td>
+			<td><a href="soundation.html">Soundation</a></td>
+			<td><center>Online</center>
+			<td>iliketocode</td>
+		</tr>
+	</tbody>
+</table></center>
+	</body>
+</html>
