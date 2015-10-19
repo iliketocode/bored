@@ -10,6 +10,18 @@ header{
 	width:100%;
 	height:50px;
 }
+.headeritem{
+	color:white;
+	padding-left:20px;
+	display:inline-block;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-right:20px;
+}
+.headeritem:hover{
+	background-color:#007D4B;
+	color:white;
+}
 a{
 	color:blue;
 	text-decoration:none;
@@ -59,8 +71,14 @@ ul.headerlist{
 	border-color:#00E68A;
 	background-color:#00E68A;
 	color:white;
+	padding: 5px 5px 5px 5px;
+	margin-top:5px;
+	margin-right:5px;
 }
 #queryform{
 	border-radius:5px;
 	border-color:#00E68A;
+	padding: 5px 5px 5px 5px;
+	margin-top:5px;
+	margin-right:5px;
 }
