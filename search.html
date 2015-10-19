@@ -4,12 +4,14 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="script.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	</head>
 	<body>
 <header>
-	<ul class="headerlist">
-		<li><a href="index.html" class="headerlistitem">Bored Activities!</a></li>
-	</ul>
+	<!-- No script header - Must edit in all files! -->
+	<!-- To edit main header see _header.html -->
+	<a href="index.html" class="headeritem">Bored Activities!</a>
+	<span style="text-align:right"><form action="search.html" method="get" style="text-align:right"><input type="text" name="q" id="queryform"><button type="submit" id="submitform"><span class="fa fa-search"></span></button></form></span>
 </header>
 <h1>Search results</h1>
 <h4>New pages may not be shown</h4>
@@ -27,5 +29,7 @@
   })();
 </script>
 <gcse:search></gcse:search>
+
+<footer></footer>
 	</body>
 </html>
