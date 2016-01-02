@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bored Activities</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<style>
+		
+		</style>
+		<META NAME="ROBOTS" CONTENT="NOINDEX"> <!-- This lines makes sure Google or some other search engine does not index the mobile site -->
+	</head>
+	<body>
+		<script>
+		$(document).ready(function(){
+			if(!document.location.hash || document.location.hash == "" || document.location.hash == "#"){
+				$("#sitecontent").load("../index.html #content");
+			}else{
+				$("#sitecontent").load("../" + document.location.hash.replace("#", "") + ".html #content");
+			}
+		});
+		</script>
+		<div id='sitecontent'>If you see this message for more then 10 seconds then the page failed to load</div>
+	</body>
+</html>
