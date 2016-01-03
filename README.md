@@ -1,5 +1,7 @@
 # [Bored Activities Site](https://iliketocode.github.io/bored/)
 
+[![Join the chat at https://gitter.im/iliketocode/bored](https://badges.gitter.im/iliketocode/bored.svg)](https://gitter.im/iliketocode/bored?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Authors
 [@iliketocode](https://github.com/iliketocode/) - HTML, Site Owner, Author - [Author Page](http://iliketocode.github.io/bored/authors/iliketocode.html)
 
