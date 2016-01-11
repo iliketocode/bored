@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bored Activities</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<style>
+		body{
+			width: 99%;
+			height: 100%;
+			background-color:#00FF99;
+			font-family: Arial, Arial;
+			padding-top: 25px;
+		}
+		header{
+			background-color:#00B26B;
+			color:white;
+			position:absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 35px;
+		}
+		nav{
+			background-color:#00B26B;
+			color:white;
+		}
+		nav a{
+			color:white;
+			text-decoration:none;
+		}
+		nav a:hover{
+			text-decoration:underline;
+		}
+		</style>
+		<META NAME="ROBOTS" CONTENT="NOINDEX"> <!-- This lines makes sure Google or some other search engine does not index the mobile site -->
+	</head>
+	<body>
+		<script>
+		function stringStartsWith (string, prefix) {
+			return string.slice(0, prefix.length) == prefix;
+		}
+		var hash = document.location.hash;
+		var page = "";
+		$(document).ready(function(){
+			var a = function(){
+				$("a").each(function(){
+					if(stringStartsWith($(this).attr("href"), "http://") || stringStartsWith($(this).attr("href"), "https://")){
+						document.location == $(this).attr("href");
+					}else{
+						if(!$(this).attr("notouch")){
+							var href = $(this).attr("href");
+							var newhref = "/bored/mobile/index.html#" + href.replace(".html", "");
+							$(this).attr("href", newhref);
+						}
+					}
+				});
+			}
+			if(!document.location.hash || document.location.hash == "" || document.location.hash == "#"){
+				$("#sitecontent").load("../index.html #content", a);
+				page = "index";
+			}else{
+				$("#sitecontent").load("../" + document.location.hash.replace("#", "") + ".html #content", a);
+				page = document.location.hash.replace("#", "");
+			}
+			setInterval(function(){
+				if(hash != document.location.hash){
+					document.location.reload();
+				}
+			}, 500);
+			$("#navtoggle").click(function(){ 
+				$("nav").toggle(); 
+			});
+		});
+		</script>
+		<span id='navtoggle' style='position:absolute;top:7px;right:5px;color:white;z-index:9999'><span class='fa fa-bars'></span></span>
+		<header>
+			<span style='font-size:30px'><a style='color:white;text-decoration:none' href='index.html'>Bored Activities</a></span>
+			<nav style='display:none'>
+				<a href='index.html'>Bored Activities</a><br>
+				<a href='authors/index.html'>Authors</a><br>
+				<a href='.'>Forum</a><br>
+				<hr color='black'>
+				<a href='../index.html' notouch="yes">Switch to desktop</a>
+			</nav>
+		</header>
+		<div id='sitecontent'>
+		Loading... <span class='fa fa-spinner fa-pulse'></span><br>
+		If you contiune to see this message for up to 10 seconds then the page may not have been found or failed to load so try reloading the page
+		</div>
+		
+		<hr color='black'>
+		Bored Activities is made by these <a href='authors/index.html'>authors</a><br>
+		<a href="../index.html" notouch="yes">Switch to desktop</a>
+	</body>
+</html>
