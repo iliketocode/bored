@@ -60,7 +60,7 @@
 				$("#sitecontent").load("../index.html #content", a);
 				page = "index";
 			}else if(stringStartsWith($(this).attr("href"), "#/bored/")){
-				$("#sitecontent").load("../" + doucment.location.hash.replace("#/bored/", "") + ".html #content", a);
+				$("#sitecontent").load("../" + document.location.hash.replace("#/bored/", "") + ".html #content", a);
 				page = document.location.hash.replace("#/bored/", "");
 			}else{
 				$("#sitecontent").load("../" + document.location.hash.replace("#", "") + ".html #content", a);
