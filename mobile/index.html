@@ -59,7 +59,7 @@
 			if(!document.location.hash || document.location.hash == "" || document.location.hash == "#"){
 				$("#sitecontent").load("../index.html #content", a);
 				page = "index";
-			}else if(stringStartsWith($(this).attr("href"), "#/bored/")){
+			}else if(stringStartsWith(document.location.hash, "#/bored/")){
 				$("#sitecontent").load("../" + document.location.hash.replace("#/bored/", "") + ".html #content", a);
 				page = document.location.hash.replace("#/bored/", "");
 			}else{
