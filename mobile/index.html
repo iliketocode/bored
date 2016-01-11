@@ -59,6 +59,9 @@
 			if(!document.location.hash || document.location.hash == "" || document.location.hash == "#"){
 				$("#sitecontent").load("../index.html #content", a);
 				page = "index";
+			}else if(stringStartsWith($(this).attr("href"), "#/bored/"){
+				$("#sitecontent").load("../" + doucment.location.hash.replace("#/bored/", "") + ".html #content", a);
+				page = document.location.hash.replace("#/bored/", "");
 			}else{
 				$("#sitecontent").load("../" + document.location.hash.replace("#", "") + ".html #content", a);
 				page = document.location.hash.replace("#", "");
@@ -79,7 +82,7 @@
 			<nav style='display:none'>
 				<a href='index.html'>Bored Activities</a><br>
 				<a href='authors/index.html'>Authors</a><br>
-				<a href='.'>Forum</a><br>
+				<a href='http://boredactivitiesforum.herokuapp.com/'>Forum</a><br>
 				<hr color='black'>
 				<a href='../index.html' notouch="yes">Switch to desktop</a>
 			</nav>
